@@ -7,6 +7,11 @@ var lowercasevalue = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l"
 var numbervalue = ["0","1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var symbolvalue = ["!", "#", "$", "%", "&", "'", "(", ")"]
 
+var uppercase = false;
+var lowercase = false;
+var numbers = false;
+var symbols = false;
+
 
 // Write password to the #password input
 function writePassword() {
@@ -18,21 +23,26 @@ passwordText.value = password;
 //Questions once the generate button is selected
 function generateBtn () {
   var confirmLength = "";
-  while (isNaN)(confirmLength || confirmLength < 8 || confirmLength > 128) {
+  while (isNaN)(confirmLength || confirmLength < 8 || confirmLength > 128); {
     confirmLength = prompt("What length would you like your password to be? Please choose between 8 - 128 characters");
-    if (confirmLength === null) {
-      break;
-    }
+    if (confirmLength === null);
   }
 
-
-
+if(confirmLength){
+  if(confirm("Would you like to include uppercase letters?") == true) {
+    uppercasevalue = true
+  }
+  if (confirm("Would you like to include lowercase letters?") == true) {
+    lowercasevalue = true
+  }
+  if (confirm("Would you like to include numbers?") == true {
+    numbervalue = true
+  }
+  if (confirm("Would you like to include special characters") == true {
+    symbolvalue = true
+  }
+  
  
-  var uppercase = confirm("Would you like to include uppercase letters?");
-  var lowercase = confirm("Would you like to include lowercase letters?");
-  var numbers = confirm("Would you like to include numbers?");
-  var symbols = confirm("Would you like to include special characters?");
-}
 
 
 // Creating loop for password
@@ -41,5 +51,7 @@ function generateBtn () {
 
 
 
-// Password to generate to textbox
+// Password to generate to textbox..math random
+
+
 //document.getElementById("writePassword").value = password
