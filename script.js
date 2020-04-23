@@ -12,13 +12,14 @@ var lowercase = false;
 var numbers = false;
 var symbols = false;
 
+var securedpassword = "";
+
 
 // Write password to the #password input
-function writePassword() {
+//function writePassword() {
 var password = generatePassword();
 var passwordText = document.querySelector("#password");
 
-passwordText.value = password;
 
 //Questions once the generate button is selected
 function generateBtn () {
@@ -47,11 +48,10 @@ if(confirmLength){
 
 // Creating loop for password
 
+for (var i = 0; i <1; ++i) {
 
+}
 
-
-
-// Password to generate to textbox..math random
 
 
 //document.getElementById("writePassword").value = password
